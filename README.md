@@ -1,48 +1,47 @@
-# **Système d'accès sécurisé avec STM32**
+# **Secure Access System with STM32**
 
-Ce projet implémente un système d'accès sécurisé basé sur un mot de passe, conçu avec un microcontrôleur **STM32F401RE**. Le système permet de contrôler l'accès via un clavier matriciel et fournit un retour visuel avec un écran LCD et des LEDs. Un moteur (simulant une serrure électronique) est activé lorsque le mot de passe correct est saisi.
+This project implements a password-based secure access system designed with an **STM32F401RE** microcontroller. The system manages access using a matrix keypad and provides visual feedback through an LCD display and LEDs. A motor (simulating an electronic lock) is activated when the correct password is entered.
 
-## **Fonctionnalités principales**
-- **Saisie sécurisée du mot de passe** : Un clavier matriciel (4x4) permet à l'utilisateur d'entrer un mot de passe.
-- **Vérification du mot de passe** : Le microcontrôleur compare l'entrée utilisateur avec un mot de passe prédéfini.
-- **Retour visuel** : 
-  - Un écran LCD affiche les instructions et le statut (par exemple : "Entrez le mot de passe", "Accès autorisé").
-  - Une LED verte s'allume en cas de mot de passe correct.
-- **Activation du moteur** : Un moteur DC est activé via un driver L293D, simulant l'ouverture d'une porte.
-- **Extensibilité** : Peut être étendu avec d'autres technologies comme RFID ou communication Bluetooth.
+## **Key Features**
+- **Secure Password Entry**: A 4x4 matrix keypad allows users to enter a password.
+- **Password Verification**: The microcontroller compares the user input with a predefined password.
+- **Visual Feedback**:  
+  - An LCD screen displays instructions and status messages (e.g., "Enter Password," "Access Granted").
+  - A green LED lights up when the correct password is entered.
+- **Motor Activation**: A DC motor is triggered via an L293D driver, simulating a door lock mechanism.
+- **Extensibility**: The system can be expanded with additional technologies like RFID or Bluetooth communication.
 
-## **Technologies utilisées**
-- **STM32CubeMX** : Utilisé pour configurer les broches du STM32F401RE et générer le code d’initialisation.
-- **Proteus 8 Professional** : Simulation du circuit, incluant le clavier, l’écran LCD, la LED et le moteur.
-- **Microcontrôleur STM32F401RE** : Cœur du système, assurant le traitement des entrées et la gestion des périphériques.
+## **Technologies Used**
+- **STM32CubeMX**: Used to configure the STM32F401RE pins and generate initialization code.
+- **Proteus 8 Professional**: Circuit simulation, including the keypad, LCD, LED, and motor.
+- **STM32F401RE Microcontroller**: The system's core, responsible for input processing and peripheral management.
 
-## **Schémas et capture d’écran**
-### **Schéma électronique dans Proteus**
-![Schéma Proteus](5.PNG)
+## **Diagrams and Screenshots**
+### **Proteus Circuit Diagram**
+![Proteus Diagram](5.PNG)
 
-### **Configuration des broches dans STM32CubeMX**
-![Configuration des broches](configurationpins.PNG)
+### **Pin Configuration in STM32CubeMX**
+![Pin Configuration](configurationpins.PNG)
 
-## **Comment utiliser ce projet ?**
-1. **Simulation dans Proteus** :
-   - Ouvrez le fichier de simulation dans Proteus.
-   - Lancez la simulation pour tester le fonctionnement.
-2. **Déploiement sur STM32** :
-   - Importez la configuration CubeMX dans STM32CubeIDE.
-   - Compilez et téléversez le code sur une carte STM32F401RE.
-3. **Interagir avec le système** :
-   - Entrez le mot de passe via le clavier matriciel.
-   - Observez le retour visuel (LED, écran LCD).
-   - Si le mot de passe est correct, le moteur s'active.
+## **How to Use This Project**
+1. **Simulation in Proteus**:
+   - Open the simulation file in Proteus.
+   - Run the simulation to test functionality.
+2. **Deployment on STM32**:
+   - Import the CubeMX configuration into STM32CubeIDE.
+   - Compile and upload the code to an STM32F401RE board.
+3. **Interacting with the System**:
+   - Enter the password using the matrix keypad.
+   - Observe visual feedback (LEDs, LCD screen).
+   - If the password is correct, the motor will activate.
 
-## **Structure du projet**
-- **/Proteus** : Contient les fichiers du schéma de simulation dans Proteus.
-- **/CubeMX** : Fichiers de configuration pour STM32CubeMX.
-- **/Code** : Le code source généré et modifié pour STM32.
+## **Project Structure**
+- **/Proteus**: Contains Proteus simulation files.
+- **/CubeMX**: CubeMX configuration files.
+- **/Code**: Generated and modified source code for STM32.
 
-## **Améliorations possibles**
-- Ajout d'un buzzer pour signaler les erreurs ou succès.
-- Mise en place d'une double authentification avec RFID ou biométrie.
-- Connexion Bluetooth/Wi-Fi pour contrôler et surveiller le système à distance.
-- Verrouillage temporaire après plusieurs échecs.
-
+## **Possible Improvements**
+- Adding a buzzer to signal errors or success.
+- Implementing dual authentication with RFID or biometrics.
+- Adding Bluetooth/Wi-Fi connectivity for remote control and monitoring.
+- Introducing a temporary lockout after multiple failed attempts.

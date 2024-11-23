@@ -21,7 +21,7 @@ Ce projet implémente un système d'accès sécurisé basé sur un mot de passe,
 ![Schéma Proteus](5.PNG)
 
 ### **Configuration des broches dans STM32CubeMX**
-![Configuration des broches](configuration.PNG)
+![Configuration des broches](configuration pins.PNG)
 
 ## **Comment utiliser ce projet ?**
 1. **Simulation dans Proteus** :

@@ -23,6 +23,9 @@ This project implements a password-based secure access system designed with an *
 ### **Pin Configuration in STM32CubeMX**
 ![Pin Configuration](configurationpins.PNG)
 
+### **Clock Configuration in STM32CubeMX**
+![Pin Configuration](clock.PNG)
+
 ## **How to Use This Project**
 1. **Simulation in Proteus**:
    - Open the simulation file in Proteus.
